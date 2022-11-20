@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='play.css')}}" class="style">
+</head>
+<body>
+    <div class="class container">
+        <h1>Tablero de Ajedrez</h1>
+        
+            {%for j in range(num_y) %}
+                <div class="cajas" style="width: {{size_rem}}rem">
+                <div class="cajas2">
+                    {%for i in range(num_x) %}
+                        {% if j%2==0 %}
+                            {% if i%2==0 %}
+                                <div class="rojo" style="background-color:{{color1}}"></div>
+                            {% else %}
+                                <div class="negro" style="background-color:{{color2}}"></div>
+                            {% endif %}
+                        {% else %}
+                            {% if i%2==0 %}
+                                <div class="negro" style="background-color:{{color2}}"></div>
+                            {% else %}
+                                <div class="rojo" style="background-color:{{color1}}"></div>
+                            {% endif %}
+                        {% endif %}
+                        
+                        {% endfor %}
+                </div>
+                        {% endfor %}
+        </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+.container {
+    margin-top: 2rem;
+    /* width: auto; */
+}
+
+.cajas {
+    /* display:flex; */
+}
+.cajas2 {
+    display:flex;
+}
+.rojo {
+    width: 5rem;
+    height: 5rem;
+    margin:0;
+    /* background-color:red; */
+}
+
+.negro {
+    width: 5rem;
+    height: 5rem;
+    margin:0;
+    /* background-color:black; */
+}
